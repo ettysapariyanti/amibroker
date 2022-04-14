@@ -7,7 +7,7 @@ Tutorial dasar Amibroker:
 [Amibroker Formula Language](https://enlightenedstocktrading.com/the-ultimate-free-amibroker-tutorial-guide/ "AFL")
 
 
-contoh source code AFL untuk menampilkan moving average:
+Contoh source code AFL untuk menampilkan moving average:
 
 ```afl
 // Downloaded From https://www.WiseStockTrader.com
@@ -65,5 +65,21 @@ AddTextColumn(FullName(),"Full name");
 
 ```
 
+Contoh source code AFL sederhana untuk bisa menampilkan tabel:
 
+```c
+
+//source code AFL custom
+
+_SECTION_BEGIN("Menghitung Saham");
+
+Plot(Close,"Candles",colorDefault,styleCandle);
+
+// Plot(Close,"Candles",colorDefault);
+
+
+_SECTION_END();
+
+
+```
 
