@@ -83,3 +83,27 @@ _SECTION_END();
 
 ```
 
+Penggabungan Moving Average 20 & Moving Average 50 :
+
+
+```c
+
+//source code AFL custom
+
+_SECTION_BEGIN("Menghitung Saham");
+
+// Plot(Close,"Candles",colorDefault,styleCandle);
+
+// Plot(Close,"Candles",colorDefault);
+
+Plot(Close,"Harga Penutupan",colorRed,styleCandle);
+
+Plot(MA(Close,20),"Moving Average 20",colorGreen,styleLine | styleThick);
+
+Plot(MA(Close,50),"Moving Average 50",colorBlue,styleLine | styleThick);
+
+
+_SECTION_END();
+
+
+```
