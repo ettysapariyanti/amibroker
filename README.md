@@ -107,3 +107,26 @@ _SECTION_END();
 
 
 ```
+
+
+
+Source Code AFL untuk membuat judul di bagian paling atas dan baris keterangan waktu (timeline) dibagian paling bawah:
+
+```c
+
+_SECTION_BEGIN("Menghitung Saham");
+
+SetChartOptions(0,chartShowArrows|chartShowDates); // membuat timeline dibagian paling bawah
+
+_N(Title = StrFormat("{{NAME}} - {{INTERVAL}} {{DATE}} Open %g, High %g, Low %g, Close %g (%.1f%%) {{VALUES}}", O, H, L, C, SelectedValue(ROC(C,1))));
+
+Plot(C,"Harga Penutupan",colorWhite,styleCandle); // membuat dasar candle grafik
+
+
+_SECTION_END();
+
+```
+
+
+
+
