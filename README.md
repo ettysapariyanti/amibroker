@@ -128,5 +128,39 @@ _SECTION_END();
 ```
 
 
+Source Code AFL Moving Average 3,5,20,50,100,200:
+
+```c
+
+_SECTION_BEGIN("Menghitung Saham");
+
+Plot(Close,"Harga Penutupan",colorGreen,styleCandle); // Menampilkan dasar chart
+
+Plot(MA(Close,3),"Moving Average 3",colorBrown,styleLine | styleThick); // Menampilkan garis MA 3
+
+Plot(MA(Close,5),"Moving Average 5",colorBlue,styleLine | styleThick); // Menampilkan garis MA 5
+
+Plot(MA(Close,20),"Moving Average 20",colorPink,styleLine | styleThick); // Menampilkan garis MA 20
+
+
+Plot(MA(Close,50),"Moving Average 50",colorLightOrange,styleLine | styleThick); // Menampilkan garis MA 50
+
+Plot(MA(Close,100),"Moving Average 100",colorDarkOliveGreen,styleLine | styleThick); // Menampilkan MA 100
+
+Plot(MA(Close,200),"Moving Average 200",colorGold,styleLine | styleThick); // Menampilkan MA 200
+
+
+SetChartOptions(0,chartShowArrows | chartShowDates); // Membuat garis timeline di bagian paling bawah chart
+
+
+_SECTION_END();
+
+
+```
+
+![image](https://user-images.githubusercontent.com/29531817/163507306-954016d1-718e-450f-92a7-db2de1ee8887.png)
+
+
+
 
 
